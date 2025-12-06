@@ -4,33 +4,33 @@ using UnityEngine;
 
 public class Catapult : MonoBehaviour
 {
-    [SerializeField] private Rigidbody spoon;
-    [SerializeField] private Ball ball;
+    [SerializeField] private Rigidbody _spoon;
+    [SerializeField] private Ball _ball;
     [Range(1f, 20f)]
-    [SerializeField] private float fireForce = 5f;
-    [SerializeField] private Vector3 fireDirection = new Vector3(0f, 1f, 0f);
-    [SerializeField] private quaternion restRotation;
+    [SerializeField] private float _fireForce = 5f;
+    [SerializeField] private Vector3 _fireDirection = new(0f, 1f, 0f);
+    [SerializeField] private quaternion _restRotation;
 
     public void Fire()
     {
-        if (spoon == null)
+        if (_spoon == null)
         {
-            throw new ArgumentNullException(nameof(spoon));
+            throw new ArgumentNullException(nameof(_spoon));
         }
 
-        spoon.AddForce(fireDirection.normalized * fireForce, ForceMode.Impulse);
+        _spoon.AddForce(_fireDirection.normalized * _fireForce, ForceMode.Impulse);
     }
 
     public void Reload()
     {
-        spoon.linearVelocity = Vector3.zero;
-        spoon.transform.rotation = restRotation;
+        _spoon.linearVelocity = Vector3.zero;
+        _spoon.transform.rotation = _restRotation;
 
-        if (ball == null)
+        if (_ball == null)
         {
-            throw new ArgumentNullException(nameof(ball));
+            throw new ArgumentNullException(nameof(_ball));
         }
 
-        ball.ReturnToSpoon();
+        _ball.ReturnToSpoon();
     }
 }

@@ -2,21 +2,21 @@ using UnityEngine;
 
 public class Subscriber : MonoBehaviour
 {
-    [SerializeField] private InputReader inputReader;
-    [SerializeField] private Swing swing;
-    [SerializeField] private Catapult catapult;
+    [SerializeField] private InputReader _inputReader;
+    [SerializeField] private Swing _swing;
+    [SerializeField] private Catapult _catapult;
 
     private void OnEnable()
     {
-        inputReader.SwingPressed += swing.ApplyImpulse;
-        inputReader.FirePressed += catapult.Fire;
-        inputReader.ReloadPressed += catapult.Reload;
+        _inputReader.SwingPressed += _swing.ApplyImpulse;
+        _inputReader.FirePressed += _catapult.Fire;
+        _inputReader.ReloadPressed += _catapult.Reload;
     }
 
     private void OnDisable()
     {
-        inputReader.SwingPressed -= swing.ApplyImpulse;
-        inputReader.FirePressed -= catapult.Fire;
-        inputReader.ReloadPressed -= catapult.Reload;
+        _inputReader.SwingPressed -= _swing.ApplyImpulse;
+        _inputReader.FirePressed -= _catapult.Fire;
+        _inputReader.ReloadPressed -= _catapult.Reload;
     }
 }

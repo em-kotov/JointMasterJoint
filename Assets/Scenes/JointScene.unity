@@ -332,8 +332,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2c9afc989012d345a4dc825bec60833, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  seat: {fileID: 1159536553}
-  impulseForce: 5
+  _seat: {fileID: 1159536553}
+  _impulseForce: 5
 --- !u!1 &24281319
 GameObject:
   m_ObjectHideFlags: 0
@@ -13673,8 +13673,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: affd1b1791e24954eb24d13ac968ca52, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spoon: {fileID: 2077783562}
-  rb: {fileID: 870775867}
+  _spoon: {fileID: 2077783562}
+  _rigidbody: {fileID: 870775867}
 --- !u!54 &870775867
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -13802,11 +13802,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de772a2eaa0e6e649892adfcc9ba7f9b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spoon: {fileID: 1995487951}
-  ball: {fileID: 870775866}
-  fireForce: 20
-  fireDirection: {x: 0, y: 1, z: 0}
-  restRotation:
+  _spoon: {fileID: 1995487951}
+  _ball: {fileID: 870775866}
+  _fireForce: 20
+  _fireDirection: {x: 0, y: 1, z: 0}
+  _restRotation:
     value:
       x: 0
       y: 0
@@ -14500,9 +14500,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82915e29954108746af50adeea5bd942, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inputReader: {fileID: 1750871776}
-  swing: {fileID: 13200340}
-  catapult: {fileID: 886453682}
+  _inputReader: {fileID: 1750871776}
+  _swing: {fileID: 13200340}
+  _catapult: {fileID: 886453682}
 --- !u!4 &1087418731
 Transform:
   m_ObjectHideFlags: 0
@@ -23662,9 +23662,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32eef91f8e894ae4abbb21b8d5c3cdb5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  swingButton: 101
-  fireButton: 113
-  reloadButton: 114
+  _swingButton: 101
+  _fireButton: 113
+  _reloadButton: 114
 --- !u!4 &1750871777
 Transform:
   m_ObjectHideFlags: 0

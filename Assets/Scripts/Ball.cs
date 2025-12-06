@@ -3,22 +3,22 @@ using UnityEngine;
 
 public class Ball : MonoBehaviour
 {
-    [SerializeField] private Transform spoon;
-    [SerializeField] private Rigidbody rb;
+    [SerializeField] private Transform _spoon;
+    [SerializeField] private Rigidbody _rigidbody;
 
     public void ReturnToSpoon()
     {
-        if (spoon == null)
+        if (_spoon == null)
         {
-            throw new ArgumentNullException(nameof(spoon));
+            throw new ArgumentNullException(nameof(_spoon));
         }
 
-        if (rb == null)
+        if (_rigidbody == null)
         {
-            throw new ArgumentNullException(nameof(rb));
+            throw new ArgumentNullException(nameof(_rigidbody));
         }
 
-        rb.linearVelocity = Vector3.zero;
-        transform.position = spoon.position;
+        _rigidbody.linearVelocity = Vector3.zero;
+        transform.position = _spoon.position;
     }
 }

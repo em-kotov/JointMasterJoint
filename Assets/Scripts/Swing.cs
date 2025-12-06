@@ -3,16 +3,16 @@ using UnityEngine;
 
 public class Swing : MonoBehaviour
 {
-    [SerializeField] private Rigidbody seat;
-    [SerializeField] private float impulseForce = 5f;
+    [SerializeField] private Rigidbody _seat;
+    [SerializeField] private float _impulseForce = 5f;
 
     public void ApplyImpulse()
     {
-        if (seat == null)
+        if (_seat == null)
         {
-            throw new ArgumentNullException(nameof(seat));
+            throw new ArgumentNullException(nameof(_seat));
         }
 
-        seat.AddForce(Vector3.forward * impulseForce, ForceMode.Impulse);
+        _seat.AddForce(Vector3.forward * _impulseForce, ForceMode.Impulse);
     }
 }
